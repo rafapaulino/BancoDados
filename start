@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS Livro (
+
+
+    id INTEGER PRIMARY KEY,
+    titulo TEXT,
+    autor TEXT,
+    ano INTEGER,
+    preco REAL
+
+
+);
+

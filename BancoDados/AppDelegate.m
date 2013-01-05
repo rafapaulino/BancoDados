@@ -7,12 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "DatabaseHandler.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    //criar a tabela caso ela nao exista ainda
+    //databasehandler é um singleton, e por isso acesso sua instancia atraves do metodo shared
+    [[DatabaseHandler shared] runScript:@"start"];
+    
+    //o script start é o arquivo de texto que adicionamos ao projeto, onde existe uma chamada sql para criacao de uma nova tabela chamada livro, caso ela ainda nao exista
+    
+    
     return YES;
 }
 							

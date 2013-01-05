@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, weak) IBOutlet UITextField *autor;
+@property (nonatomic, weak) IBOutlet UITextField *titulo;
+@property (nonatomic, weak) IBOutlet UITextField *preco;
+@property (nonatomic, weak) IBOutlet UITextField *ano;
+
+@property (nonatomic, weak) IBOutlet UITableView *tabela;
+
+-(IBAction)inserirNovoLivroClicado:(id)sender;
+-(void)buscarDadosAtualizados;
+
 
 @end
